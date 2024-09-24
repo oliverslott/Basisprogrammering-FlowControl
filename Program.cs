@@ -99,14 +99,10 @@ while(true)
     Console.WriteLine();
     Console.Write("Valg: ");
     string spillerValg = Console.ReadLine().ToLower();
+    
     if(spillerValg == "quit")
     {
         break;
-    }
-    if(spillerValg != "sten" && spillerValg != "saks" && spillerValg != "papir")
-    {
-        Console.WriteLine("Det er ikke en mulighed! Prøv igen!");
-        continue;
     }
     
     IValg playerChosen;
@@ -122,7 +118,7 @@ while(true)
             playerChosen = new Saks();
             break;
         default:
-            Console.WriteLine("Det er ikke en mulighed!");
+            Console.WriteLine("Det er ikke en mulighed! Prøv igen!");
             continue;
     }
     var rand = new Random();
