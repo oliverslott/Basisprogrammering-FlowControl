@@ -99,7 +99,7 @@ while(true)
     Console.WriteLine();
     Console.Write("Valg: ");
     string spillerValg = Console.ReadLine().ToLower();
-    
+
     if(spillerValg == "quit")
     {
         break;
@@ -146,6 +146,7 @@ while(true)
     if(playerChosen.GetType() == aiChosen.GetType())
     {
         Console.WriteLine("Det blev uafgjort!");
+        continue;
     }
     if(playerChosen.VinderOver(aiChosen))
     {
